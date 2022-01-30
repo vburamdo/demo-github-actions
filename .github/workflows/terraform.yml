@@ -4,8 +4,6 @@ on:
   push:
     branches:
       -  "${{ github.ref }}" 
-  pull_request:
-      - "${{ github.ref }}"
 
 jobs:
   terraform:
