@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - dev
+      - UAT
+      - prd
   pull_request:
 
 jobs:
@@ -72,5 +74,13 @@ jobs:
         run: exit 1
 
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform destroy -auto-approve
+        if: github.ref == 'refs/heads/dev' && github.event_name == 'push'
+        run: terraform apply 
+        
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/UAT' && github.event_name == 'push' 
+        run: terraform apply
+
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/prd' && github.event_name == 'push' 
+        run: terraform apply
