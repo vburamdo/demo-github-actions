@@ -10,7 +10,7 @@ terraform {
     organization = "buramdododdi"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "gh-actions-demo-PRD"
     }
   }
 }
