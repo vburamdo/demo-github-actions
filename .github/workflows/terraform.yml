@@ -3,9 +3,7 @@ name: "Terraform"
 on:
   push:
     branches:
-      -  "${{ github.ref }}" 
-  pull_request:
-      - "${{ github.ref }}"
+      -  ${{ github.ref }}
 
 jobs:
   terraform:
