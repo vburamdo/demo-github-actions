@@ -3,7 +3,7 @@ name: "Terraform"
 on:
   push:
     branches:
-      -  ${{ github.ref }}
+      - prd
 
 jobs:
   terraform:
