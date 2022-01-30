@@ -7,9 +7,6 @@ on:
       - UAT
       - prd
   pull_request:
-      - dev
-      - UAT
-      - prd
 
 jobs:
   terraform:
